@@ -1,6 +1,6 @@
 import { Sparklines, SparklinesLine,SparklinesReferenceLine } from 'react-sparklines';
 import React, { Component } from 'react';
-import './style/Global.scss';
+import './style/Global.css';
 import cssStyle from './style/StockGraph.css';
 
 class StockGraph extends Component {

@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import  './style/Global.scss';
+import  './index.css';
+import  './style/Global.css';
 import cssStyle from './style/Header.css';
 
 import mainLogo from './images/logo.svg';
-import Main from './Main'
+import Main from './Main';
+
 
 class App extends Component {
+
   render() {
       return (
+
           <div className="page-wrapper">
             <header  className={cssStyle.header}>
                 <a className={cssStyle.logo}><img src={mainLogo} alt={"mNetLogo"}/></a>

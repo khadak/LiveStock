@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import StockRow from './StockRow';
-import './style/Global.scss';
+import './style/Global.css';
 import cssStyle from './style/StockData.css';
 
 class StockTable extends Component{
