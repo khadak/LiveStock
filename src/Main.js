@@ -8,7 +8,8 @@ class Main extends Component{
         super(props);
         this.state = {
             stocks: {},
-            currentStockGraph: null
+            currentStockGraph: null,
+            isConnected: true
         };
         this.onStockClick = this.onStockClick.bind(this);
     }
@@ -22,10 +23,11 @@ class Main extends Component{
     };
 
     render(){
-        const {stocks, currentStockGraph} = this.state;
+        const {stocks, currentStockGraph, isConnected} = this.state;
         const currentStockGraphData = (stocks[currentStockGraph] && stocks[currentStockGraph].history);
         return (
             <div className="main">
+                {!isConnected && <div className="global-error"> Oops!!! Something went wrong.</div>}
                 <StockTable stocksCurrentData = {Object.values(this.state.stocks)} onStockClick={this.onStockClick}/>
                 <StockGraph historyData = {currentStockGraphData || []} stockName={currentStockGraph} diff={stocks[currentStockGraph] && stocks[currentStockGraph].diff}/>
             </div>
@@ -59,10 +61,19 @@ class Main extends Component{
                 });
                 return {
                     ...prevState,
+                    isConnected: true,
                     currentStockGraph: (prevState.currentStockGraph || data[0][0]),
                     stocks: newStocks
                 };
             });
+        };
+        webSocket.onerror = () =>  {
+            this.setState((lastState) => {
+                return {
+                    ...lastState,
+                    isConnected: false
+                }
+            })
         };
         setInterval(() => {
             this.setState((prevState) => {

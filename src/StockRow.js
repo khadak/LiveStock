@@ -18,7 +18,7 @@ const StockRow = (props) => {
     }else{
         displayTime = 'Updated few seconds ago'
     }
-    const bodyClassName = cssStyle.content + ' ' + (isOdd ? "bg-1" :  "bg-2") +  (diff?(' ' + (diff<0? cssStyle.negative : cssStyle.positive)):'');
+    const bodyClassName = cssStyle.content + ' ' + (isOdd ? "content-1" :  "content-2") +  (diff?(' ' + (diff<0? cssStyle.negative : cssStyle.positive)):'');
     return (
             <div className={bodyClassName} onClick={props.onClick}>
                 <div className={cssStyle.name}>

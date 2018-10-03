@@ -24,6 +24,15 @@
         flex: unset;
         width: 90px;
     }
+
+    .diff {
+
+    }
+
+    .time {
+        display: flex;
+        flex: 2;
+    }
 }
 .bodywrap {
     display: flex;
@@ -43,6 +52,10 @@
     position: relative;
 }
 .content {
+    &:nth-of-type(odd) {
+        background: #f1f8ff;
+        border-radius: 4px;
+    }
     display: flex;
     padding: 20px 0;
     margin: 0 15px;
@@ -98,6 +111,8 @@
 
     }
     .time {
-
+        display: flex;
+        flex: 2;
+        font-size: 14px;
     }
 }

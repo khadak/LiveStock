@@ -29,8 +29,8 @@ class StockTable extends Component{
                 <div className={cssStyle.header}>
                     <div className={cssStyle.ticker}>Ticker</div>
                     <div className={cssStyle.price}>Price</div>
-                    <div className={cssStyle.difference}>Diffrence</div>
-                    <div className={cssStyle.lastupadate}>Last Update</div>
+                    <div className={cssStyle.diff}>Diffrence</div>
+                    <div className={cssStyle.time}>Last Update</div>
                 </div>
                 <div className={cssStyle.bodywrap}>
                     <div className={cssStyle.body}>

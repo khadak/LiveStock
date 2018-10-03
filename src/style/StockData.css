@@ -21,6 +21,9 @@
   .header .ticker {
     flex: unset;
     width: 90px; }
+  .header .time {
+    display: flex;
+    flex: 2; }
 
 .bodywrap {
   display: flex;
@@ -46,6 +49,9 @@
   min-height: 50px;
   align-items: center;
   cursor: pointer; }
+  .content:nth-of-type(odd) {
+    background: #f1f8ff;
+    border-radius: 4px; }
   .content div {
     display: flex;
     flex: 1;
@@ -78,5 +84,9 @@
   .content .name {
     text-transform: uppercase;
     flex: unset; }
+  .content .time {
+    display: flex;
+    flex: 2;
+    font-size: 14px; }
 
 /*# sourceMappingURL=StockData.css.map */
