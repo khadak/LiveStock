@@ -1,0 +1,8 @@
+:global .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+    flex: 1;
+    }
+
