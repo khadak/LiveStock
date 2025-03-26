@@ -31,7 +31,7 @@ class StockGraph extends Component {
                                 </Sparklines>
                             </div>
                         ):(
-                            <div className="loader">
+                            <div className="loader loader">
 
                             </div>
                         )
